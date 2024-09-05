@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!--The lang attribute specifies the language of the element,s content
+The lang attribute is a Global Attribute, and can be used on any HTML element.-->
+<html lang="en">
+  <head>
+    <!--The charset attribute specifies the character encoding for the HTML document-->
+    <meta charset="UTF-8" />
+
+    <!--used to force the Internet Explorer(IE) to use the latest version of the rendering engine.-->
+    <!--http-equiv attribute is used to define an HTTP header for the document, and X-UA-Compatible is a non-standard header that 
+    Microsoft introduced to support compatibility with older versions of IE.-->
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge" />
+
+    <!--viewport - The viewport is the user,s visible area of the web page. 
+    The width=device-width part sets the width of the page to follow the screen-width of the device 
+    (which will vary depending on the device).
+    The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+
+    <!--<meta> viewport element gives the browser instructions on how to control the page,s dimensions and scaling-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--The defer attribute is a boolean attribute. If the defer attribute is set , It
+    specifies that the script is downloaded in parallel to parsing the page and executed 
+    after the page has finished parsing-->
+
+    <script src="js/script.js" defer></script>
+    <title>Starlink</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div id="mobile-menu" class="mobile-main-menu">
+      <ul>
+        <li><a href="#">Mission</a></li>
+        <li><a href="#">Launches</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">Shop</a></li>
+
+        <li class="mobile-only"><a href="falcon9.html">Falcon9</a></li>
+        <li class="mobile-only"><a href="falcon-heavy.html">Falcon Heavy</a></li>
+        <li class="mobile-only"><a href="dragon.html">Dragon</a></li>
+        <li class="mobile-only"><a href="Starship.html">Starship</a></li>
+        <li class="mobile-only"><a href="HSF.html">Human Space flight</a></li>
+        <li class="mobile-only"><a href="Rideshare.html">Rideshare</a></li>
+        <li class="mobile-only"><a href="Starshield.html">Starshield</a></li>
+        <li class="mobile-only"><a href="Starlink.html">Starlink</a></li>
+      </ul>
+    </div>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Spacex" />
+        </a>
+      </div>
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="falcon9.html">Falcon9</a></li>
+          <li><a href="falcon-heavy.html"> Falcon Heavy</a></li>
+          <li><a href="dragon.html">Dragon</a></li>
+          <li><a href="Starship.html">Starship</a></li>
+          <li><a href="HSF.html">Human Space flight</a></li>
+          <li><a href="Rideshare.html">Rideshare</a></li>
+          <li><a href="Starshield.html">Starshield</a></li>
+          <li><a href="Starlink.html">Starlink</a></li>
+          <li><a href="#"></a>Shop</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hamburger Menu-->
+    <button id="menu-btn" class="hamburger" type="button">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+
+<!-- Section A -->
+   <section class = "section-animate Starlink">
+   <div class="section-inner-center">
+    <h3>STARLINK</h3>
+    <p>CONNECT AT HOME OR ON THE GO</p>
+   </div>
+</section>
+
+<!--Section B-->
+
+
+    <footer>
+      <ul>
+        <li>SpaceX &copy; 2024</li>
+        <li><a href="#">PRIVACY POLICY</a></li>
+        <li><a href="#">SUPPLIERS</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<!--The lang attribute specifies the language of the element,s content
+The lang attribute is a Global Attribute, and can be used on any HTML element.-->
+<html lang="en">
+  <head>
+    <!--The charset attribute specifies the character encoding for the HTML document-->
+    <meta charset="UTF-8" />
+
+    <!--used to force the Internet Explorer(IE) to use the latest version of the rendering engine.-->
+    <!--http-equiv attribute is used to define an HTTP header for the document, and X-UA-Compatible is a non-standard header that 
+    Microsoft introduced to support compatibility with older versions of IE.-->
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge" />
+
+    <!--viewport - The viewport is the user,s visible area of the web page. 
+    The width=device-width part sets the width of the page to follow the screen-width of the device 
+    (which will vary depending on the device).
+    The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+
+    <!--<meta> viewport element gives the browser instructions on how to control the page,s dimensions and scaling-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--The defer attribute is a boolean attribute. If the defer attribute is set , It
+    specifies that the script is downloaded in parallel to parsing the page and executed 
+    after the page has finished parsing-->
+
+    <script src="js/script.js" defer></script>
+    <title>SpaceX</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div id="mobile-menu" class="mobile-main-menu">
+      <ul>
+        <li><a href="#">Mission</a></li>
+        <li><a href="#">Launches</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">Shop</a></li>
+
+        <li class="mobile-only"><a href="falcon9.html">Falcon9</a></li>
+        <li class="mobile-only"><a href="falcon-heavy.html">Falcon Heavy</a></li>
+        <li class="mobile-only"><a href="dragon.html">Dragon</a></li>
+        <li class="mobile-only"><a href="Starship.html">Starship</a></li>
+        <li class="mobile-only"><a href="HSF.html">Human Space flight</a></li>
+        <li class="mobile-only"><a href="Rideshare.html">Rideshare</a></li>
+        <li class="mobile-only"><a href="Starshield.html">Starshield</a></li>
+        <li class="mobile-only"><a href="Starlink">Starlink</a></li>
+      </ul>
+    </div>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Spacex" />
+        </a>
+      </div>
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="falcon9.html">Falcon9</a></li>
+          <li><a href="falcon-heavy.html"> Falcon Heavy</a></li>
+          <li><a href="dragon.html">Dragon</a></li>
+
+          <li><a href="Starship.html">Starship</a></li>
+          <li><a href="HSF.html">Human Space flight</a></li>
+          <li><a href="Rideshare.html">Rideshare</a></li>
+          <li><a href="Starshield.html">Starshield</a></li>
+          <li><a href="Starlink.html">Starlink</a></li>
+          <li><a href="#"></a>Shop</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hamburger Menu-->
+    <button id="menu-btn" class="hamburger" type="button">
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+
+    <!-- Section A -->
+    <section class="section-a">
+      <div class="section-inner">
+        <h4>RECENT LAUNCH</h4>
+        <h2>STARLINK MISSION</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>REWATCH</span>
+        </a>
+      </div>
+      <!--stroke="#ffffff": The stroke color of the path is set to white (#ffffff).
+
+fill="none": The fill color of the path is set to none, meaning the path will not be filled with a color.
+stroke-width="2px": The width of the stroke (outline) of the path is set to 2 pixels.
+d="M2.000, 5.000 L15.000, 18.000 L28.000, 5.000": This is the path definition.
+
+The d attribute specifies the shape of the path using a series of commands.
+M2.000, 5.000: Move to the point (2, 5). This sets the starting point of the path.
+L15.000, 18.000: Draw a line to the point (15, 18).
+L28.000, 5.000: Draw a line to the point (28, 5). -->
+
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000 , 5.000 L15.000 , 18.000 L28.000 , 5.000"
+          ></path>
+          <!--SVG images are made up of vectors, which are lines and curves defined by mathematical equations. 
+            This means that SVG images can be scaled up or down without losing any quality, -->
+        </svg>
+      </div>
+    </section>
+
+    <!-- Section B -->
+    <section class="section-b">
+      <div class="section-inner">
+        <h4>RECENT LAUNCH</h4>
+        <h2>NROL-186 MISSION</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>REWATCH</span>
+        </a>
+      </div>
+
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000 , 5.000 L15.000 , 18.000 L28.000 , 5.000"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Section C -->
+    <section class="section-c">
+      <div class="section-inner">
+        <h4>RECENT LAUNCH</h4>
+        <h2>GOES-U MISSION</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>REWATCH</span>
+        </a>
+      </div>
+
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000 , 5.000 L15.000 , 18.000 L28.000 , 5.000"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Section D -->
+    <section class="section-d">
+      <div class="section-inner">
+        <h2>ADVANCING HUMAN SPACEFLIGHT</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>LEARN MORE</span>
+        </a>
+      </div>
+
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000 , 5.000 L15.000 , 18.000 L28.000 , 5.000"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Section E -->
+    <section class="section-e">
+      <div class="section-inner">
+        <h2>TO MAKE LIFE MULTIPLANETARY</h2>
+        <a href="#" class="btn">
+          <div class="hover"></div>
+          <span>LEARN MORE</span>
+        </a>
+      </div>
+
+      <div class="scroll-arrow">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000 , 5.000 L15.000 , 18.000 L28.000 , 5.000"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <footer>
+      <ul>
+        <li>SpaceX &copy; 2024</li>
+        <li><a href="#">PRIVACY POLICY</a></li>
+        <li><a href="#">SUPPLIERS</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
