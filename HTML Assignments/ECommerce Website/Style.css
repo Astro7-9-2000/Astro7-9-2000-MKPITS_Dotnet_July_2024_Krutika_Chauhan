@@ -12,13 +12,15 @@ body
 .top-nav-bar
 {
     height : 70px;
-    position: fixed;
+    position: relative;
     background :#fff;
-    margin-bottom:10px;
-    border-bottom: 3px solid orange;
+    margin-bottom: 10px;
+    border-bottom: 2px solid orange;
     z-index: 2;
     overflow: hidden;
     width: 100%;
+    top: 0;
+    display: flexbox;
 }
 
 .logo
@@ -64,10 +66,11 @@ body
 
 .menu-bar
 {
+    margin-bottom: 80px;
     width: 40%;
-    height: 50px;
+    height: 80px;
     float: right;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 .menu-bar ul
 {
@@ -212,11 +215,9 @@ body
 
 .slider
 {
-    margin-top: 60%;
+    margin-top: 90px;
     width: 60%;
     margin-right: 20px;
-    padding: 0px;
-    margin-top: 60px;
     overflow: hidden;
     z-index: 1;
     position: relative;
@@ -231,13 +232,14 @@ body
     z-index: 1 !important;
 }
 
+/* Code for small screen */
 @media only screen and (max-width: 980px)
 {
     .slider
     {
       width: 100%;
       margin-left: 0;
-      margin-top: 80px;
+      margin-top: 40px;
     }
 }
 /*---------------------- Container CSS ------------------------*/
