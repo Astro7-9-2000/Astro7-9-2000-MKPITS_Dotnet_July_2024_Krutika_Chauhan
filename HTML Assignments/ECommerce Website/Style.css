@@ -1,0 +1,259 @@
+*
+{
+    margin : 0;
+    padding : 0;
+}
+
+body 
+{
+    background-color: #f1f3f4;
+    font-family: sans-serif; 
+}
+.top-nav-bar
+{
+    height : 70px;
+    position: fixed;
+    background :#fff;
+    margin-bottom:10px;
+    border-bottom: 3px solid orange;
+    z-index: 2;
+    overflow: hidden;
+    width: 100%;
+}
+
+.logo
+{
+    height: 40px;
+    margin: 5px 10px;
+}
+
+.form-control
+{
+    margin-top: 10px;
+    margin-left: 90px;
+    border : 1px solid orange !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    box-shadow: none !important;
+    width: 100%;
+}
+
+.input-group-text
+{
+  background: orange;  
+  border: 1px solid orange;
+  margin: 10px 10px 3px 0;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 30px !important;
+  border-top-right-radius: 30px !important;
+  cursor: pointer;
+}
+
+.search-box
+{
+    display: inline-flex;
+    width: 60%;
+}
+.fa-search
+{
+    color:#fff;
+}
+
+.menu-bar
+{
+    width: 40%;
+    height: 50px;
+    float: right;
+    padding: 15px 0;
+}
+.menu-bar ul
+{
+    display: flex;
+    height: 80%;
+    float: right;
+    padding: 0;
+}
+
+.menu-bar ul li
+{
+    border-left: 1px solid #fff;
+    list-style-type: none;
+    text-align: center;
+    background-color: orange;
+    cursor : pointer;
+    padding: 10px 30px;
+    flex: 1;
+}
+
+.menu-bar ul li a
+{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-basket-shopping
+{
+    margin-right: 5px;
+}
+@media only screen and (max-width: 980px)
+{
+    .top-nav-bar
+    {   
+        width: 80px;
+        height: 130px;
+        border-bottom: 0;
+    }
+    .search-box
+    {
+        width: 100%;
+    }
+    .menu-bar
+    {
+        width: 100%;
+    }
+    .menu-bar ul
+    {
+      margin: 10px 0;
+      width: 100%;
+    }
+    .menu-bar ul li
+    {
+       height: 40px;
+       width: 100%; 
+    }
+}
+/*---------------------- Side Menu -------------------------*/
+.side-menu
+{
+    height: 100%;
+    width: 80%;
+    font-size: 14px;
+    float: left;
+    z-index: 2;
+    background-color: #ddd;
+}
+.side-menu ul
+{
+    margin-left: 10px;
+
+}
+.side-menu ul li
+{
+    list-style-type: none;
+    font-weight:bolder;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.side-menu ul li:hover
+{
+    color: orange;
+}
+.side-menu ul li ul
+{
+    display: none;
+    z-index: 10;
+    top: 77px;
+}
+.side-menu ul li:hover ul
+{
+    display: block;
+    height: 400px;
+    margin: 14%;
+    padding: 0 100px 10px 10px;
+    position: fixed;
+    background: #ececec;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
+.fa-angle-right
+{
+    margin-top: 4px;
+    margin-right: 8px;
+    float: right;
+}
+#menu-btn,close-btn
+{
+    font-size: 30px;
+    margin: 10px;
+    color: orange;
+    display: none;
+}
+
+@media only screen and (max-width: 980px)
+{
+    .side-menu
+    {
+       width: 30%;
+       z-index: 20;
+       top: 133px;
+       position: fixed;
+       font-size: 12px;
+       display : none;
+    }
+    .side-menu ul li ul
+    {
+       top: 133px;
+    }
+    .side-menu ul li:hover ul
+    {
+        margin-left: 31%;
+    }
+    #menu-btn
+    {
+        display: block;
+    }
+}
+
+/*------------------------------------- Slider CSS -------------------------------*/
+
+.slider
+{
+    margin-top: 60%;
+    width: 60%;
+    margin-right: 20px;
+    padding: 0px;
+    margin-top: 60px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.carousel
+{
+    box-shadow: 1px 1px 4px 1px rgba(0 , 0 , 0 , 0.5);
+}
+.carousel-indicators
+{
+    z-index: 1 !important;
+}
+
+@media only screen and (max-width: 980px)
+{
+    .slider
+    {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 80px;
+    }
+}
+/*---------------------- Container CSS ------------------------*/
+.container 
+{
+   display: flex;
+   margin: 10px 0;
+   flex-wrap: wrap;
+   justify-items: flex-end;
+}
+.container img
+{
+  margin-top: 30%;
+  margin: 50%;
+  width: 100%;
+  padding: 20px 10px;
+  transition: 1s;
+  cursor: pointer;
+}
