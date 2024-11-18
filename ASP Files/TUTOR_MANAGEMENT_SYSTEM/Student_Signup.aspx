@@ -21,12 +21,12 @@
                     <br />
 
                     <asp:TextBox ID="TxtFatherName" CssClass="form-control" placeholder="Enter Father Name" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ControlToValidate = "TxtName" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator1" runat = "server" ErrorMessage="Father Name is Required"></asp:RequiredFieldValidator>  
+                    <asp:RequiredFieldValidator ControlToValidate = "TxtFatherName" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator1" runat = "server" ErrorMessage="Father Name is Required"></asp:RequiredFieldValidator>  
 
                     <br />
 
                     <asp:TextBox ID="TxtSurName" CssClass="form-control" placeholder="Enter Surname" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ControlToValidate = "TxtName" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator2" runat = "server" ErrorMessage="Surname is Required"></asp:RequiredFieldValidator>  
+                    <asp:RequiredFieldValidator ControlToValidate = "TxtSurName" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator2" runat = "server" ErrorMessage="Surname is Required"></asp:RequiredFieldValidator>  
 
                     <br />
 
@@ -36,7 +36,6 @@
                         <asp:ListItem>Female</asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator InitialValue = "Select Gender" ControlToValidate = "GenderDropDownList" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator3" runat = "server" ErrorMessage="Gender is Required"></asp:RequiredFieldValidator>  
-
                     <br />
 
                     <asp:TextBox ID="TxtAge" CssClass="form-control" placeholder="Enter Age" runat="server"></asp:TextBox>
@@ -44,13 +43,30 @@
                     <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Age should be within 5 to 60" ControlToValidate="TxtAge" Display="Dynamic" ForeColor="Red" MaximumValue="60" MinimumValue="5" SetFocusOnError="True" Type="Integer"></asp:RangeValidator>
                     <br />
 
-                    <asp:TextBox ID="TxtCountry" CssClass="form-control" placeholder="Enter Country" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ControlToValidate = "TxtCountry" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator5" runat = "server" ErrorMessage="Country is Required"></asp:RequiredFieldValidator>  
+                    <asp:DropDownList ID="CountryDropDownList" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="CountryDropDownList_SelectedIndexChanged">
+                        <asp:ListItem>Select Country</asp:ListItem>
+                        <asp:ListItem>India</asp:ListItem>
+                        <asp:ListItem>Pakistan</asp:ListItem>
+                        <asp:ListItem>USA</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:SqlDataSource runat="server" ID="TMS_DB" ConnectionString='<%$ ConnectionStrings:TMS_DBConnectionString %>' ProviderName='<%$ ConnectionStrings:TMS_DBConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [Student_SignUp]"></asp:SqlDataSource>
+                    <asp:RequiredFieldValidator InitialValue = "Select Country" ControlToValidate = "CountryDropDownList" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator5" runat = "server" ErrorMessage="Country is Required"></asp:RequiredFieldValidator>  
                 </div>
 
                 <div class="col-md-4">
-                    <asp:TextBox ID="TxtCity" CssClass="form-control" placeholder="Enter City" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ControlToValidate = "TxtCity" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator6" runat = "server" ErrorMessage=" City is Required"></asp:RequiredFieldValidator>  
+                    <asp:DropDownList ID="CityDropDownList" CssClass="form-control" runat="server">
+                        <asp:ListItem>Select City</asp:ListItem>
+                        <asp:ListItem>Hyderabad</asp:ListItem>
+                        <asp:ListItem>Delhi</asp:ListItem>
+                        <asp:ListItem>Mumbai</asp:ListItem>
+                        <asp:ListItem>Chennai</asp:ListItem>
+                        <asp:ListItem>Pune</asp:ListItem>
+                        <asp:ListItem>Karachi</asp:ListItem>
+                        <asp:ListItem>New York</asp:ListItem>
+                        <asp:ListItem>Chicago</asp:ListItem>
+                        <asp:ListItem>Ohio</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator InitialValue = "Select City" ControlToValidate = "CityDropDownList" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator6" runat = "server" ErrorMessage="City is Required"></asp:RequiredFieldValidator>  
                     <br />
 
                     <asp:TextBox ID="TxtAddress" TextMode="MultiLine" Rows="4" CssClass="form-control" placeholder="Enter Address" runat="server"></asp:TextBox>
@@ -99,12 +115,13 @@
                     <asp:RequiredFieldValidator InitialValue = "Select Tution Type" ControlToValidate = "TutionTypeDropDownList" ForeColor = "Red" SetFocusOnError = "true" Display ="Dynamic" ID = "RequiredFieldValidator13" runat = "server" ErrorMessage="Tution Preference is Required"></asp:RequiredFieldValidator>  
                     <br />
 
-                    <asp:TextBox ID="TxtUserName" CssClass="form-control" placeholder="Enter Username" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ControlToValidate="TxtuserName" ForeColor="Red" SetFocusOnError="true" Display="Dynamic" ID="RequiredFieldValidator14" runat="server" ErrorMessage="Username is Required"></asp:RequiredFieldValidator>  
+                    <asp:TextBox ID="TxtUserName" CssClass = "form-control" placeholder = "Enter Username" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ControlToValidate="TxtUserName" ForeColor="Red" SetFocusOnError="true" Display="Dynamic" ID="RequiredFieldValidator14" runat="server" ErrorMessage="Username is Required"></asp:RequiredFieldValidator>  
                     <br />
 
-                    <asp:TextBox ID="TxtPassword" CssClass="form-control" placeholder="Enter Password" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TxtPassword" CssClass = "form-control" placeholder = "Enter Password" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ControlToValidate="TxtPassword" ForeColor="Red" SetFocusOnError="true" Display="Dynamic" ID="RequiredFieldValidator15" runat="server" ErrorMessage="Password is Required"></asp:RequiredFieldValidator>  
+                    <asp:RegularExpressionValidator ControlToValidate = "TxtPassword" ID = "RegularExpressionValidator1" ForeColor = "Red" Display ="Dynamic"  runat = "server" ErrorMessage = "Please Enter Strong Password" ValidationExpression = "^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"></asp:RegularExpressionValidator>
                     <br />
 
                     <asp:TextBox ID="TxtConfirmPassword" CssClass="form-control" placeholder="Re-Enter Password" runat="server"></asp:TextBox>
@@ -116,7 +133,7 @@
         <div class="row">
 
             <div class="col-md-6 mx-auto">
-                <asp:Button ID="StudentSignUpButton" runat="server" Text="Sign Up" CssClass="btn btn-primary btn-block" />
+                <asp:Button ID="StudentSignUpButton" OnClick = "StudentSignUpButton_Click" runat="server" Text="Sign Up" CssClass="btn btn-primary btn-block" />
             </div>
         </div>
             <br />
