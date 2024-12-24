@@ -1,0 +1,104 @@
+﻿
+@model IMS_Project.Models.UserRegistration
+@{
+    ViewData["Title"] = "User Registeration";
+}
+
+<h1>User Register</h1>
+
+<form asp-action="Register" method="post">
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ContactNumber"></label>
+        <input asp-for="ContactNumber" class="form-control" />
+        <span asp-validation-for="ContactNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Role"></label>
+        <select asp-for="Role" class="form-control">
+            <option value="">Select Role</option>
+            <option value="Admin">Admin</option>
+            <option value="Instructor">Instructor</option>
+            <option value="Student">Student</option>
+        </select>
+        <span asp-validation-for="Role" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateOfBirth"></label>
+        <input asp-for="DateOfBirth" type="date" class="form-control" />
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" placeholder="Street" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="State"></label>
+        <input asp-for="State" class="form-control" />
+        <span asp-validation-for="State" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ZipCode"></label>
+        <input asp-for="ZipCode" class="form-control" />
+        <span asp-validation-for="ZipCode" class="text-danger"></span>
+    </div>
+
+    <div class="form-group" id="courseEnrolledDiv" style="display:none;">
+        <label asp-for="CourseEnrolled"></label>
+        <input asp-for="CourseEnrolled" class="form-control" />
+        <span asp-validation-for="CourseEnrolled" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+
+<!-- Include SweetAlert CSS and JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    $(document).ready(function () {
+        // Check if there is a success message in TempData
+        var successMessage = '@TempData["SuccessMessage"]';
+        if (successMessage) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: successMessage,
+                confirmButtonText: 'OK'
+            });
+        }
+    });
+</script>
+
+
